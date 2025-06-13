@@ -38,7 +38,7 @@ def get_embedding(payload):
     response = requests.post(
         EMBEDDINGS_API_URL,
         headers=HEADERS,
-        json=payload,
+        json={"inputs":payload},
     )
     return response.json()
 
